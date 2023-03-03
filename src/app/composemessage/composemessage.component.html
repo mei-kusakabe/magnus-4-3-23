@@ -62,25 +62,25 @@
 
                                                             <a href="/Inbox" class="btn btn-custon-four btn-primary"
                                                                 style="user-select: text;">
-                                                                <i class="fa fa-inbox" style="user-select: text;"></i>
+
+                                                                <i class="fa-solid fa-inbox"></i>
+                                                                <!-- <i class="fa fa-inbox" style="user-select: text;"></i> -->
                                                                 Inbox
                                                             </a>
                                                             <a href="/ComposeMessage"
                                                                 class="btn btn-custon-four btn-primary"
                                                                 style="user-select: text;">
-                                                                <i class="fa fa-commenting"
-                                                                    style="user-select: text;"></i>
+                                                                <i class="fa-solid fa-message"></i>
                                                                 Compose Message
                                                             </a>
                                                             <a href="/Sent" class="btn btn-custon-four btn-primary"
                                                                 style="user-select: text;">
-                                                                <i class="fa fa-share-square-o"
-                                                                    style="user-select: text;"></i>
+                                                                <i class="fa-solid fa-envelope-circle-check"></i>
                                                                 Sent
                                                             </a>
                                                             <a href="/Folders" class="btn btn-custon-four btn-primary"
                                                                 style="user-select: text;">
-                                                                <i class="fa fa-folder" style="user-select: text;"></i>
+                                                                <i class="fa-solid fa-folder-closed"></i>
                                                                 Folders
                                                             </a>
 
@@ -249,7 +249,8 @@
                                                                                         [(ngModel)]="formData.subject"
                                                                                         id="subject" name="subject"
                                                                                         type="text" value=""
-                                                                                        style="user-select: text;">
+                                                                                        style="user-select: text;"
+                                                                                        required>
 
                                                                                     <span class="field-validation-valid"
                                                                                         data-valmsg-for="ComposeMsgSubject"
@@ -282,7 +283,8 @@
                                                                                         maxlength="300" name="message"
                                                                                         [(ngModel)]="formData.message"
                                                                                         rows="2"
-                                                                                        style="user-select: text;"></textarea>
+                                                                                        style="user-select: text;"
+                                                                                        required></textarea>
                                                                                     <span class="field-validation-valid"
                                                                                         data-valmsg-for="Body"
                                                                                         data-valmsg-replace="true"
@@ -311,12 +313,14 @@
                                                                                 name="Send-ComposeMessage"
                                                                                 class="btn btn-sm btn-primary login-submit-cs"
                                                                                 style="user-select: text;"><i
-                                                                                    class="fa fa-send-o"
-                                                                                    style="user-select: text;"></i>
+                                                                                    class="fa-regular fa-paper-plane"></i>
                                                                                 Send
                                                                                 Message</button>
+
+                                                                            <p class="mx-3 my-2 green">{{sms}}</p>
                                                                         </div>
                                                                     </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>

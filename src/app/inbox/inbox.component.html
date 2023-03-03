@@ -53,25 +53,31 @@
                                                 </style>
 
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-                                                    style="text-align:center;">
-                                                    <ul class="ccMenu" style="">
-                                                        <li>
+                                                    style="text-align: center; user-select: text;">
+                                                    <ul class="ccMenu" style="user-select: text;">
+                                                        <li style="user-select: text;">
 
-                                                            <a href="/Inbox" class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-inbox"></i>
+                                                            <a href="/Inbox" class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+
+                                                                <i class="fa-solid fa-inbox"></i>
+                                                                <!-- <i class="fa fa-inbox" style="user-select: text;"></i> -->
                                                                 Inbox
                                                             </a>
                                                             <a href="/ComposeMessage"
-                                                                class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-commenting"></i>
+                                                                class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+                                                                <i class="fa-solid fa-message"></i>
                                                                 Compose Message
                                                             </a>
-                                                            <a href="/Sent" class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-share-square-o"></i>
+                                                            <a href="/Sent" class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+                                                                <i class="fa-solid fa-envelope-circle-check"></i>
                                                                 Sent
                                                             </a>
-                                                            <a href="/Folders" class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-folder"></i>
+                                                            <a href="/Folders" class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+                                                                <i class="fa-solid fa-folder-closed"></i>
                                                                 Folders
                                                             </a>
 
@@ -92,8 +98,6 @@
 
                                 <div class="page registration-result-page">
                                     <div class="page-body">
-
-
                                         <div class="customer-blocks">
                                             <div class="panel panel-default">
 
@@ -109,11 +113,12 @@
                                                             <h1>Message move to folder</h1>
                                                             <div class="sparkline13-outline-icon">
                                                                 <span class="sparkline13-collapse-link"><i
-                                                                        class="fa fa-chevron-up"></i></span>
+                                                                        class="fa fa-chevron-up"
+                                                                        (click)="toggleDiv()"></i></span>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="sparkline13-graph">
+                                                    <div class="sparkline13-graph" *ngIf="showDiv">
                                                         <div class="datatable-dashv1-list custom-datatable-overright">
                                                             <div class="basic-login-form-ad">
                                                                 <div class="row">
@@ -316,7 +321,7 @@
 
                                                             </div>
 
-                                                            <div class="inputs">
+                                                            <!-- <div class="inputs">
                                                                 <div class="buttons" id="deletebtncomm">
                                                                     <button type="submit" id="DeleteInboxMsg"
                                                                         name="DeleteInboxMsg"
@@ -324,7 +329,7 @@
                                                                         value="Delete"><i class="fa fa-trash"></i>
                                                                         Delete</button>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
                                                         </div>
 
@@ -344,10 +349,6 @@
                             </div>
                             <br>
                         </form>
-
-
-
-
                     </div>
 
                 </div>

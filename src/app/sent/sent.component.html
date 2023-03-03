@@ -51,25 +51,31 @@
                                                 </style>
 
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-                                                    style="text-align:center;">
-                                                    <ul class="ccMenu" style="">
-                                                        <li>
+                                                    style="text-align: center; user-select: text;">
+                                                    <ul class="ccMenu" style="user-select: text;">
+                                                        <li style="user-select: text;">
 
-                                                            <a href="/Inbox" class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-inbox"></i>
+                                                            <a href="/Inbox" class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+
+                                                                <i class="fa-solid fa-inbox"></i>
+                                                                <!-- <i class="fa fa-inbox" style="user-select: text;"></i> -->
                                                                 Inbox
                                                             </a>
                                                             <a href="/ComposeMessage"
-                                                                class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-commenting"></i>
+                                                                class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+                                                                <i class="fa-solid fa-message"></i>
                                                                 Compose Message
                                                             </a>
-                                                            <a href="/Sent" class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-share-square-o"></i>
+                                                            <a href="/Sent" class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+                                                                <i class="fa-solid fa-envelope-circle-check"></i>
                                                                 Sent
                                                             </a>
-                                                            <a href="/Folders" class="btn btn-custon-four btn-primary">
-                                                                <i class="fa fa-folder"></i>
+                                                            <a href="/Folders" class="btn btn-custon-four btn-primary"
+                                                                style="user-select: text;">
+                                                                <i class="fa-solid fa-folder-closed"></i>
                                                                 Folders
                                                             </a>
 
@@ -170,7 +176,6 @@
                                                                         <input type="checkbox" name="select_all"
                                                                             value="1" id="example-select-all"
                                                                             (change)="onDeleteRow(i)">
-
 
                                                                         <!-- <input type="checkbox"
                                                                             [(ngModel)]="msg.selected"> -->

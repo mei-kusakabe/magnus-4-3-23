@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { user } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
@@ -14,12 +15,36 @@ export class SentComponent implements OnInit {
   // constructor() { }
 
   msgs: any;
-
   selected?: boolean;
 
   // constructor(private myService: ComposemessageComponent) {
   //   this.msgs = myService.getData();
   // }
+
+
+
+
+  onDeleteRow(index: number) {
+    const msg = this.msgs[index];
+    // const user = this.aff.currentUser;
+
+    if (confirm("Are you sure you want to delete this Message?")) {
+      if (msg) {
+
+        this.aff.user.subscribe(data => {
+          this.afs.collection('users').doc(data?.uid).collection('messages').doc(msg.id).delete()
+            .then(() => {
+              console.log('Message deleted successfully');
+              console.log(msg.id);
+              this.msgs = this.msgs.slice(0, index).concat(this.msgs.slice(index + 1));
+            })
+            .catch(err => console.error(err));
+        })
+
+      }
+    }
+
+  }
 
   constructor(public afs: AngularFirestore, public aff: AngularFireAuth) {
 
@@ -44,6 +69,9 @@ export class SentComponent implements OnInit {
 
     );
 
+
+
+
   }
 
   ngOnInit(): void {
@@ -64,21 +92,21 @@ export class SentComponent implements OnInit {
   //   }
   // }
 
-  onDeleteRow(index: number) {
-    if (confirm("Are you sure you want to delete this Message?")) {
-      this.msgs.splice(index, 1);
+  // onDeleteRow(index: number) {
+  // if (confirm("Are you sure you want to delete this Message?")) {
+  //   this.msgs.splice(index, 1);
 
-      // msg.forEach(m => {
-      //   this.afs.collection('users').doc(data?.uid).collection<any>('messages').doc(m.id).delete()
-      //     .then(() => {
-      //       console.log("Document successfully deleted!");
-      //     })
-      //     .catch((error) => {
-      //       console.error("Error removing document: ", error);
-      //     });
-      // });
-    }
-  }
+  // msg.forEach(m => {
+  //   this.afs.collection('users').doc(data?.uid).collection<any>('messages').doc(m.id).delete()
+  //     .then(() => {
+  //       console.log("Document successfully deleted!");
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error removing document: ", error);
+  //     });
+  // });
+  // }
+  // }
 
 
 

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ComposemessageComponent implements OnInit {
 
-
+  sms: string = '';
 
   formData = {
     subject: '',
@@ -30,7 +30,12 @@ export class ComposemessageComponent implements OnInit {
       // this.formData.date = new Date();
 
       this.firestore.collection('users').doc(data?.uid).collection('messages').add(this.formData)
-        .then(res => console.log('Message added with ID: ', res.id))
+        .then(res => {
+          console.log('Message added with ID: ', res.id)
+          this.sms = "Message Sent Successfully"
+          this.firestore.collection('users').doc(data?.uid).collection('messages').doc(res.id).set({ "id": res.id }, { merge: true })
+
+        })
         .catch(err => console.log(err));
     })
 

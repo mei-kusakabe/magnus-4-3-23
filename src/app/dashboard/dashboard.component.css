@@ -15,6 +15,14 @@
     padding: 2px 0px;
 }
 
+/* a:hover {
+    text-decoration: none;
+} */
+
+a[_ngcontent-itr-c57]:hover {
+    text-decoration: none !important;
+}
+
 
 
 .table>thead>tr>th {
@@ -37377,8 +37385,8 @@ button.close {
 
 
 @media screen and (max-width:991px) {
-    .content-inner-all{
+    .content-inner-all {
         margin-left: 0;
         transition: all 0.3s;
     }
-  }
+}

@@ -13,6 +13,7 @@
 
   color: #ce992f;
 }
+
 .subs {
   font-family: "Poppins";
   font-style: normal;
@@ -23,6 +24,7 @@
 
   color: #666666;
 }
+
 @media only screen and (min-width: 600px) {
   .inp {
     box-sizing: border-box;
@@ -31,6 +33,7 @@
     border: 2px solid #000000;
     border-radius: 5px;
   }
+
   .inp2 {
     box-sizing: border-box;
     width: 60px;
@@ -38,6 +41,7 @@
     border: 2px solid #000000;
     border-radius: 5px;
   }
+
   #desc {
     width: 450px;
     margin-top: 20px;
@@ -55,6 +59,7 @@
 
     color: #ffffff;
   }
+
   .get {
     color: white;
     font-family: poppins;
@@ -65,40 +70,48 @@
     max-width: 528px;
     margin-top: 20px;
   }
+
   .img1 {
     width: 220px;
     position: relative;
     top: 25px;
     left: 2%;
   }
+
   .img2 {
     width: 220px;
     position: relative;
     top: 25px;
     left: 25%;
   }
+
   .img3 {
     width: 220px;
     position: relative;
     top: 25px;
     left: 2%;
   }
+
   .img4 {
     width: 220px;
     position: relative;
     top: 25px;
     left: 25%;
   }
+
   .imgUpd {
     width: 200px;
     height: 150px;
   }
+
   #imgX {
     left: 14%;
   }
+
   .updImg {
     width: 280px;
   }
+
   .inp {
     padding-left: 20px;
     box-sizing: border-box;
@@ -107,6 +120,7 @@
     border: 2px solid #000000;
     border-radius: 5px;
   }
+
   .inp2 {
     padding-left: 1px;
     box-sizing: border-box;
@@ -114,14 +128,26 @@
     height: 25px;
     border: 2px solid #000000;
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 1px;
   }
+
   #desc {
     max-width: 500px;
     margin-top: 20px;
     height: 100px;
   }
+
   .contact {
     height: 500px;
   }
 }
+
+
+@media (min-width: 320px) and (max-width: 480px) {}
+
+@media (min-width: 481px) and (max-width: 768px) {}
+
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {}
